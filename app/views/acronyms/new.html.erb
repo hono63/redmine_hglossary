@@ -1,1 +1,13 @@
 <h2>AcronymsController#new</h2>
+
+<%= form_for @acronyms do |f| %>
+  <div>
+  <%= f.text_field :acronym %>
+  </div>
+  <div>
+  <%= f.text_field :definition %>
+  </div>
+  <div>
+  <%= f.text_field :origin %>
+  </div>
+<% end %>
