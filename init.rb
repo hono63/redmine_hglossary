@@ -6,7 +6,7 @@ Redmine::Plugin.register :hglossary do
   url 'https://github.com/hono63'
   author_url 'https://github.com/hono63'
   #menu :application_menu, :acronyms, { :controller => 'acronyms', :action => 'index' }, :caption => 'Acronyms'
-  menu :top_menu, :acronyms, :caption => 'Acronyms'
+  menu :top_menu, :acronyms, :caption => '用語集'
 end
 
 #top_menu :hglossary do
