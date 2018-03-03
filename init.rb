@@ -5,12 +5,10 @@ Redmine::Plugin.register :hglossary do
   version '0.0.1'
   url 'https://github.com/hono63'
   author_url 'https://github.com/hono63'
-  #menu :application_menu, :acronyms, { :controller => 'acronyms', :action => 'index' }, :caption => 'Acronyms'
-  menu :top_menu, :acronyms, :caption => '用語集'
-end
 
-#top_menu :hglossary do
-  #permission :view_acronyms, :acronyms => [:index, :show]
-  #permission :manage_acronyms, :acronyms => [:new, :edit, :create, :update, :destroy, :preview],
-             #:require => :member
-#end
+  menu :top_menu, :hglossary, { :controller => 'acronyms', :action => 'index' }, :caption => '用語集'
+
+  permission :view_acronyms, :acronyms => [:index, :show]
+  permission :manage_acronyms, :acronyms => [:new, :edit, :create, :update, :destroy, :preview],
+             :require => :member
+end
