@@ -1,6 +1,6 @@
 <h2>AcronymsController#new</h2>
 
-<%= form_for @acronyms do |f| %>
+<%= form_for @acro do |f| %>
   <div>
   <%= f.text_field :acronym %>
   </div>
@@ -9,5 +9,8 @@
   </div>
   <div>
   <%= f.text_field :origin %>
+  </div>
+  <div>
+  <%= f.submit "送信" %>
   </div>
 <% end %>

@@ -1,11 +1,17 @@
 class AcronymsController < ApplicationController
 
   def index
-    @acronyms = Acronyms.all
+    @acros = Acronyms.all
   end
 
   def new
-    @acronyms = Acronyms.new
+    @acro = Acronyms.new
+  end
+
+  def create
+    @acro = Acronyms.new(acronym_params)
+    @acro.save
+    redirect_to @acro
   end
 
   def show

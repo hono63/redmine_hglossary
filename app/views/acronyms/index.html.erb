@@ -1,1 +1,7 @@
 <h2>AcronymsController#index</h2>
+
+<% @acros.each do |acro| %>
+  <%= acro.acronym %><br />
+  <%= acro.definition %><br />
+  <%= acro.origin %><br />
+<% end %>
