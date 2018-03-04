@@ -1,12 +1,10 @@
 class CreateAcronyms < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :acronyms do |t|
       t.string :title
       t.string :definition
       t.string :origin
+      t.text :comment
     end
-  end
-  def self.down
-    drop_table :acronyms
   end
 end
