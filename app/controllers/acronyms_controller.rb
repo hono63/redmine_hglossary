@@ -9,9 +9,14 @@ class AcronymsController < ApplicationController
   end
 
   def create
-    @acro = Acronyms.new(acronym_params)
-    @acro.save
-    redirect_to @acro
+  #@acro = Acronyms.new(params[:acronyms]) # <=これは何故か ForbiddenAttributesError が出る。
+  ac = params[:acronyms].permit(:acronym, :definition, :origin)
+  @acro = Acronyms.new(ac)
+ 
+  @acro.save
+  redirect_to @acro
+  # ↓ これはPOSTで何が送られているか表示する。
+  #render plain: params[:acronyms].inspect
   end
 
   def show
@@ -19,4 +24,5 @@ class AcronymsController < ApplicationController
 
   def edit 
   end
+
 end

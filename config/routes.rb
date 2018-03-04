@@ -3,6 +3,7 @@
 
 Rails.application.routes.draw do
   root "top#index"
-  get  "top/profile"
+  #get 'acronyms', :to => 'acronyms#index'
+  #get  "top/profile"
   resources :acronyms
 end
