@@ -1,7 +1,5 @@
 <h2>詳細 用語 (id=<%= @acro.id %>)</h2>
 
-<%= link_to '編集', edit_acronym_path(@acro.id) %>
-
 <table id="glossary-detail" >
   <tbody>
     <tr>
@@ -25,4 +23,5 @@
   </tbody>
 </table>
 
-<%= link_to 'Back', acronyms_path %>
+<%= link_to '編集', edit_acronym_path(@acro) %> | 
+<%= link_to '戻る', acronyms_path %>
