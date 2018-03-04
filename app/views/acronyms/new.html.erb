@@ -1,4 +1,4 @@
-<h2>AcronymsController#new</h2>
+<h2>新しい用語</h2>
 
 <%= form_for :acronyms, url: acronyms_path do |f| %>
   <div>
@@ -17,3 +17,5 @@
   <%= f.submit "送信" %>
   </div>
 <% end %>
+
+<%= link_to 'Back', acronyms_path %>

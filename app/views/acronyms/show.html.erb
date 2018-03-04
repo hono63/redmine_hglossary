@@ -1,1 +1,26 @@
-<h2>AcronymsController#show</h2>
+<h2>詳細 用語 (id=<%= @acro.id %>)</h2>
+
+<table id="glossary-detail" >
+  <tbody>
+    <tr>
+      <td>頭文字</td>
+        <td>
+          <%= @acro.acronym %>
+        </td>
+    </tr>
+    <tr>
+      <td>定義</td>
+        <td>
+          <%= @acro.definition %>
+        </td>
+    </tr>
+    <tr>
+      <td>もと</td>
+        <td>
+          <%= @acro.origin %>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Back', acronyms_path %>

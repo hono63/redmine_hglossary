@@ -1,7 +1,28 @@
-<h2>AcronymsController#index</h2>
+<h2>用語集</h2>
 
-<% @acros.each do |acro| %>
-  <%= acro.acronym %><br />
-  <%= acro.definition %><br />
-  <%= acro.origin %><br />
-<% end %>
+<%= link_to 'New acronym', new_acronym_url %>
+
+<table id="glossary-table" >
+  <thead>
+    <tr>
+      <th>頭文字</th>
+      <th>定義</th>
+      <th>出展</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @acros.each do |acro| %>
+      <tr>
+        <td>
+          <%= link_to acro.acronym, acronym_path(acro.id) %>
+        </td>
+        <td>
+          <%= acro.definition %>
+        </td>
+        <td>
+          <%= acro.origin %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
