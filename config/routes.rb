@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   #get 'acronyms', :to => 'acronyms#index'
   #get  "top/profile"
   resources :acronyms
+  resources :terms
 end
