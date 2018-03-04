@@ -1,4 +1,6 @@
 class AcronymsController < ApplicationController
+  # ↓ Railsの参考
+  # https://railsguides.jp/getting_started.html
 
   def index
     @acros = Acronyms.all
@@ -25,6 +27,7 @@ class AcronymsController < ApplicationController
     #render plain: params[:acronyms].inspect
   end
 
+  # model詳細表示の画面アクション
   def show
     @acro = Acronyms.find(params[:id])
   end

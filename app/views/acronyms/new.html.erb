@@ -1,21 +1,5 @@
 <h2>新しい用語</h2>
 
-<%= form_for :acronyms, url: acronyms_path do |f| %>
-  <div>
-  Acronym
-  <%= f.text_field :acronym %>
-  </div>
-  <div>
-  Definition
-  <%= f.text_field :definition %>
-  </div>
-  <div>
-  Origin
-  <%= f.text_field :origin %>
-  </div>
-  <div>
-  <%= f.submit "送信" %>
-  </div>
-<% end %>
+<%= render 'form' %>
 
-<%= link_to 'Back', acronyms_path %>
+<%= link_to '戻る', acronyms_path %>

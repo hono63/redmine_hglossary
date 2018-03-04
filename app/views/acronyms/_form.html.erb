@@ -1,0 +1,29 @@
+
+<%= form_for @acro do |f| %>
+  <% if @acro.errors.any? %>
+    <div id="error_explanation">
+       <h2><%= pluralize(@acro.errors.count, "error") %> prohibited
+         this acronym from being saved:</h2>
+       <ul>
+        <% @acro.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+       </ul>
+    </div>
+  <% end %>
+  <div>
+    Acronym
+    <%= f.text_field :acronym %>
+  </div>
+  <div>
+    Definition
+    <%= f.text_field :definition %>
+  </div>
+  <div>
+    Origin
+    <%= f.text_field :origin %>
+  </div>
+  <div>
+    <%= f.submit "送信" %>
+  </div>
+<% end %>
