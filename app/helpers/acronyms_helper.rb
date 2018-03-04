@@ -1,2 +1,2 @@
-module AcronymsHelper
+module AcronymHelper
 end

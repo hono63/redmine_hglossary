@@ -1,2 +1,2 @@
-class Acronyms < ActiveRecord::Base
+class Acronym < ActiveRecord::Base
 end

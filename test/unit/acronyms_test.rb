@@ -1,6 +1,6 @@
 require File.expand_path('../../test_helper', __FILE__)
 
-class AcronymsTest < ActiveSupport::TestCase
+class AcronymTest < ActiveSupport::TestCase
 
   # Replace this with your real tests.
   def test_truth
