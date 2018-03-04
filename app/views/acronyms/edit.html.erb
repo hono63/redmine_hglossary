@@ -1,6 +1,6 @@
 <h2>用語の編集</h2>
 
-<%= form_for :acronyms, url: acronyms_path(@acro), method: patch do |f| %>
+<%= form_for :acronyms, url: acronyms_path(@acro), method: :patch do |f| %>
   <% if @acro.errors.any? %>
     <div id="error_explanation">
        <h2><%= pluralize(@acro.errors.count, "error") %> prohibited
@@ -29,4 +29,4 @@
   </div>
 <% end %>
 
-<%= link_to 'Back', acronyms_path %>
+<%= link_to 'Back', acronyms_path(@acro.id) %>
